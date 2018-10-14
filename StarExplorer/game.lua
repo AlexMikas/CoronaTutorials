@@ -164,7 +164,8 @@ local function restoreShip()
 end
 
 local function endGame ()
-  composer.gotoScene( "menu", { time=800, effect="crossFade" } )
+  composer.setVariable( "finalScore", score )
+  composer.gotoScene( "highscores", { time=800, effect="crossFade" } )
 end
 
 local function onCollision( event )
